@@ -1,4 +1,5 @@
 import React from 'react';
+import sanju from '../assets/sanju.png'
 
 const Hero = () => {
     return (
@@ -51,7 +52,7 @@ const Hero = () => {
             <div className="flex items-center justify-center rounded-s-3xl lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 bg-gray-300 hover:transition-all shadow-xl shadow-yellow-600 hover:translate-y-[-1rem]">
   <img 
     id="profile-img"
-    src="./src/assets/sanju.png"
+    src={sanju}
     alt="Sanjay"
     className="object-contain h-full w-full"
   />
