@@ -1,0 +1,86 @@
+
+
+:root{
+    --bg-color:hsl(0, 31%, 94%);
+    --second-color:#444444;
+    --black-color:#000000;
+    --orange-color:#ffa500;
+    --blue-color:#0b7dda;
+    --icon-bg:#f4f4f4;
+    
+    }
+    *{
+    Margin:0;
+    Padding:0;
+    Box-sizing: border-box;
+    Font-family:popinse;
+    }
+    html,body{
+    Width:100%;
+    Height:100%;
+    background-color: var(--bg-color);
+    overflow-wrap: inherit;
+    
+    }
+    
+    
+      .btn-box .btn{
+        display: inline-flex ;
+        justify-content: center;
+        align-items: center;
+        width: 170px;
+        height: 100%;
+        /* background: #0a192f; */
+        /* color:#be185d; */
+        font-size: .9rem;
+        letter-spacing: 1px;
+        font-weight: 600;
+        transition: .6s;
+        overflow: hidden;
+        /* box-shadow: #be185d; */
+        /* border:1px solid #be185d; */
+        /* border-radius: 25px; */
+        position: relative;
+        z-index: 1;
+       >i{
+        padding-left: 0.5rem;
+       }
+    }
+    
+    .btn:hover{
+        color: #0d915a;
+    }
+    
+    .btn::before{
+        content: "";
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 0;
+        height: 100%;
+        transition: .5s;
+        background:#c5bcbf;
+        z-index: -1;
+    }
+    
+    .btn:hover::before{
+        width: 100%;
+    }
+    
+    .btn:nth-child(2){
+        /* background:  #0a192f; */
+        color: #be185d;
+    }
+    
+    
+    .btn:nth-child(2):hover{
+        color: #0a192f;
+    }
+    
+    
+    .btn:nth-child(2)::before{
+        background:var(--blue-color) ;
+    }
+   
+   
+    
