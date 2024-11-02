@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import hd from '../assets/hd.png'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -87,7 +88,7 @@ const Contact = () => {
             <h2 className="text-4xl font-bold lg:text-5xl">Let's talk!</h2>
             <div className="dark:text-gray-400">Vivamus in nisl metus? Phasellus.</div>
           </div>
-          <img src="./src/assets/hd.png" alt="Form" className="p-6 h-52 md:h-64" />
+          <img src={hd} alt="Form" className="p-6 h-52 md:h-64" />
         </div>
 
         <form onSubmit={handleSubmit}>
