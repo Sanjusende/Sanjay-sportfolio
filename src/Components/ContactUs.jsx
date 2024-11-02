@@ -68,9 +68,13 @@ const Contact = () => {
 
   return (
     <section id="Contact   ">
-      <h1 className="flex mt-32  justify-center items-center text-5xl  lg:text-6xl tracking-widest text-gray-500 font-bold">
-        <span className="text-[var(--orange-color)]">C</span>ontact-Us
-      </h1>
+        <h1 className="flex mt-36 justify-center mb-8 items-center text-3xl  lg:text-5xl tracking-widest text-gray-500 font-bold">
+          <span className="text-gray-600  text-3xl lg:text-5xl">04.</span>
+          <span className="text-[var(--orange-color)] border-b-2 px-2 py-1 rounded-2xl border-gray-500">C</span>ontact-Us
+          <div className="flex items-center pl-3">
+                        <span className="block w-20 lg:w-24 h-1 rounded bg-[#fe9901]"></span>
+                    </div>
+        </h1>
 
       <div className="flex justify-evenly lg:flex-row flex-col gap-10 mt-8">
         {contactDetails.map((contact, index) => (

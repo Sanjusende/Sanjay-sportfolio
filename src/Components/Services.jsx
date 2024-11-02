@@ -23,9 +23,13 @@ const Services = () => {
 
   return (
     <section id="Services" className="mt-28 ml-4 lg:ml-0">
-      <h1 className="flex justify-center items-center text-5xl lg:text-6xl tracking-widest text-gray-500 mb-8 font-bold">
-        <span className="text-[var(--orange-color)]">S</span>ervices
-      </h1>
+         <h1 className="flex justify-center mb-8 items-center text-3xl mt-4 lg:text-5xl tracking-widest text-gray-500 font-bold">
+          <span className="text-gray-600  text-3xl lg:text-5xl">02.</span>
+          <span className="text-[var(--orange-color)] border-b-2 px-2 py-1 rounded-2xl border-gray-500">S</span>ervivces
+          <div className="flex items-center pl-3">
+                        <span className="block w-20 lg:w-24 h-1 rounded bg-[#fe9901]"></span>
+                    </div>
+        </h1>
       <div className="flex flex-col sm:flex-row lg:justify-center lg:items-center gap-10 lg:ml-10   lg:mr-5">
         {services.map((service, index) => (
           <div

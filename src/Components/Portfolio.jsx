@@ -75,8 +75,12 @@ const MyWorks = () => {
   return (
     <section className="my-works mt-10 bg-gray-100 py-10">
       <div className="container mx-auto px-5">
-        <h1 className="flex justify-center items-center mb-5 text-5xl mt-16 lg:text-6xl tracking-widest text-gray-500 font-bold">
-          <span className="text-[var(--orange-color)]">M</span>y Works
+      <h1 className="flex justify-center mb-8 items-center text-3xl mt-4 lg:text-5xl tracking-widest text-gray-500 font-bold">
+          <span className="text-gray-600  text-3xl lg:text-5xl">03.</span>
+          <span className="text-[var(--orange-color)] border-b-2 px-2 py-1 rounded-2xl border-gray-500">P</span>ortfolio
+          <div className="flex items-center pl-3">
+                        <span className="block w-20 lg:w-24 h-1 rounded bg-[#fe9901]"></span>
+                    </div>
         </h1>
         <Swiper
           modules={[Navigation, Pagination, A11y, Autoplay]}

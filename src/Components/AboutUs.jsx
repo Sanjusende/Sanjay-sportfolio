@@ -66,54 +66,66 @@ const techData = [
 
 const EducationAndCertificates = () => {
   return (
-    <section className="container mt-28 mx-auto p-4 rounded-lg shadow-md overflow-y-auto">
-      <h1 className="flex justify-center mb-8 items-center text-5xl mt-4 lg:text-6xl tracking-widest text-gray-500 font-bold">
-        <span className="text-[var(--orange-color)]">A</span>bout-Us
-      </h1>
+    <section className="container mt-28 mx-auto p-4 rounded-lg shadow-md overflow-y-auto flex">
+      <div className="w-full">
+      
+        <h1 className="flex justify-center mb-8 items-center text-3xl mt-4 lg:text-5xl tracking-widest text-gray-500 font-bold">
+          <span className="text-gray-600  text-3xl lg:text-5xl">01.</span>
+          <span className="text-[var(--orange-color)] border-b-2 px-2 py-1 rounded-2xl border-gray-500">A</span>bout-Us
+          <div className="flex items-center pl-3">
+                        <span className="block w-20 lg:w-24 h-1 rounded bg-[#fe9901]"></span>
+                    </div>
+        </h1>
 
-      {/* About Me Section */}
-      <div className="mb-8 lg:mx-40 border-l-4 pl-4">
-        <h3 className="text-4xl font-bold text-black mb-2">
-          I am  a Full-Stack Developer
-        </h3>
-        <p className="text-gray-700 text-xl">I specialize in web development and am proficient in various technologies:</p>
-      </div>
+        
 
-      {/* Technologies Section */}
-      <div className="flex flex-wrap gap-4 lg:mx-40 mb-8">
-        {techData.map((tech, index) => (
-          <div
-            key={index}
-            className="flex items-center text-xl gap-2 shadow-xl px-5 py-2 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 bg-gray-100"
-          >
-            <div className="text-2xl">{tech.icon}</div>
-            <span className="text-gray-700 font-semibold">{tech.name}</span>
+        {/* About Me Section */}
+        <div className="mb-8 lg:mx-40 border-l-4 pl-4">
+          <h3 className="lg:text-4xl text-3xl font-bold text-black mb-2">
+            I am a Full-Stack Developer
+          </h3>
+          <p className="text-gray-700 text-xl">I specialize in web development and am proficient in various technologies:</p>
+        </div>
+
+        {/* Technologies Section */}
+        <div className="flex flex-wrap gap-4 lg:mx-40 mb-8">
+          {techData.map((tech, index) => (
+            <div
+              key={index}
+              className="flex items-center text-xl gap-2 shadow-xl px-5 py-2 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 bg-gray-100"
+            >
+              <div className="text-2xl">{tech.icon}</div>
+              <span className="text-gray-700 font-semibold">{tech.name}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Education Section */}
+        {educationData.map((edu, index) => (
+          <div key={index} className="mb-8 lg:mx-40 border-l-4 border-yellow-500 pl-4">
+            <h3 className="text-xl font-bold text-black flex items-center mb-2">
+              {edu.icon} {edu.institution}
+            </h3>
+            <p className="text-sm text-gray-500">{edu.date}</p>
+            <p className="text-gray-700">{edu.description}</p>
+          </div>
+        ))}
+
+        {/* Certificates Section */}
+        <h2 className="text-2xl font-semibold text-center text-green-700 mt-8 mb-4">Certifications</h2>
+        {certificatesData.map((cert, index) => (
+          <div key={index} className="mb-8 lg:mx-40 border-l-4 border-yellow-500 pl-4">
+            <h3 className="text-xl font-bold text-black flex items-center mb-2">
+              {cert.icon} {cert.title}
+            </h3>
+            <p className="text-sm text-gray-500">{cert.date}</p>
+            <p className="text-gray-700">{cert.description}</p>
           </div>
         ))}
       </div>
 
-      {/* Education Section */}
-      {educationData.map((edu, index) => (
-        <div key={index} className="mb-8 lg:mx-40 border-l-4 border-yellow-500 pl-4">
-          <h3 className="text-xl font-bold text-black flex items-center mb-2">
-            {edu.icon} {edu.institution}
-          </h3>
-          <p className="text-sm text-gray-500">{edu.date}</p>
-          <p className="text-gray-700">{edu.description}</p>
-        </div>
-      ))}
-
-      {/* Certificates Section */}
-      <h2 className="text-2xl font-semibold text-center text-green-700 mt-8 mb-4">Certifications</h2>
-      {certificatesData.map((cert, index) => (
-        <div key={index} className="mb-8 lg:mx-40 border-l-4 border-yellow-500 pl-4">
-          <h3 className="text-xl font-bold text-black flex items-center mb-2">
-            {cert.icon} {cert.title}
-          </h3>
-          <p className="text-sm text-gray-500">{cert.date}</p>
-          <p className="text-gray-700">{cert.description}</p>
-        </div>
-      ))}
+      {/* Vertical Line */}
+      <div className="hidden lg:block w-1 bg-yellow-500 h-auto ml-4"></div>
     </section>
   );
 };

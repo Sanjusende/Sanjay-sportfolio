@@ -82,8 +82,12 @@ const Skill = () => {
     <section className="text-white mt-10 py-12 px-6 md:px-12 lg:px-24 overflow-hidden relative">
       {/* Skills Progress Section */}
       <div className="max-w-7xl mx-auto mt-6 text-center" ref={skillsRef}>
-        <h1 className="flex mb-5 justify-center items-center text-4xl lg:text-6xl tracking-widest text-gray-500 font-bold">
-          <span className="text-[var(--orange-color)] ">S</span>kill
+      <h1 className="flex justify-center mb-8 items-center text-3xl mt-4 lg:text-5xl tracking-widest text-gray-500 font-bold">
+          <span className="text-gray-600  text-3xl lg:text-5xl">01.</span>
+          <span className="text-[var(--orange-color)] border-b-2 px-2 py-1 rounded-2xl border-gray-500">S</span>kills
+          <div className="flex items-center pl-3">
+                        <span className="block w-20 lg:w-24 h-1 rounded bg-[#fe9901]"></span>
+                    </div>
         </h1>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {skillsData.map((skill, index) => (
