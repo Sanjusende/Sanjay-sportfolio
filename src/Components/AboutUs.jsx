@@ -1,5 +1,7 @@
 import React from "react";
 import { FaGraduationCap, FaBriefcase, FaCertificate } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaBootstrap, FaGithub, FaJava } from "react-icons/fa";
+import { SiTailwindcss, SiExpress, SiMongodb } from "react-icons/si";
 
 const educationData = [
   {
@@ -11,13 +13,13 @@ const educationData = [
   {
     institution: "Govt. Polytechnic College Balaghat",
     date: "Dec 2021 - May 2024",
-    description: "Pursuing a Diploma in Computer Science & Engineering from Govt. Polytechnic College Balaghat, with a strong academic foundation reflected by a CGPA of 7.98% Passionate about leveraging technology to solve real-world problems and continuously learning to stay at the cutting edge of innovation.",
+    description: "Pursuing a Diploma in Computer Science & Engineering from Govt. Polytechnic College Balaghat, with a strong academic foundation reflected by a CGPA of 7.98. Passionate about leveraging technology to solve real-world problems and continuously learning to stay at the cutting edge of innovation.",
     icon: <FaGraduationCap className="mr-2" />
   },
   {
-    institution: "Sagar Institute of Research & Technology Bhopal ",
+    institution: "Sagar Institute of Research & Technology Bhopal",
     date: "August 2024 - Running",
-    description: "Sagar Institute of Research & Technology (SIRT) is self-finance private engineering institute in Bhopal, the capital city of Madhya Pradesh. The institute is approved by AICTE and affiliated with Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV), Bhopal and Barkatullah University, Bhopal for engineering and Management program respectively.",
+    description: "Sagar Institute of Research & Technology (SIRT) is a self-finance private engineering institute in Bhopal, the capital city of Madhya Pradesh. The institute is approved by AICTE and affiliated with Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV), Bhopal and Barkatullah University, Bhopal for engineering and management programs respectively.",
     icon: <FaGraduationCap className="mr-2" />
   }
 ];
@@ -31,7 +33,7 @@ const certificatesData = [
   },
   {
     title: "HashedBit Innovtion Pvt Ltd",
-    date: "27-September 2024 ,Running",
+    date: "27-September 2024, Running",
     description: "Full-Stack Developer Intern Built full-stack apps using MERN stack Developed responsive UIs with React and Tailwind CSS Created APIs with Node.js and Express Managed MongoDB databases.",
     icon: <FaBriefcase className="mr-2" />
   },
@@ -49,13 +51,46 @@ const certificatesData = [
   }
 ];
 
+const techData = [
+  { name: "HTML", icon: <FaHtml5 className="text-orange-600" /> },
+  { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
+  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-500" /> },
+  { name: "React.js", icon: <FaReact className="text-blue-400" /> },
+  { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
+  { name: "Bootstrap", icon: <FaBootstrap className="text-purple-600" /> },
+  { name: "Express.js", icon: <SiExpress className="text-gray-700" /> },
+  { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
+  { name: "GitHub", icon: <FaGithub className="text-gray-600" /> },
+  { name: "Java", icon: <FaJava className="text-red-600" /> },
+];
+
 const EducationAndCertificates = () => {
   return (
-    
-    <section className="container mt-28 mx-auto p-4 rounded-lg shadow-md max-h-[500px] overflow-y-auto">
+    <section className="container mt-28 mx-auto p-4 rounded-lg shadow-md overflow-y-auto">
       <h1 className="flex justify-center mb-8 items-center text-5xl mt-4 lg:text-6xl tracking-widest text-gray-500 font-bold">
         <span className="text-[var(--orange-color)]">A</span>bout-Us
       </h1>
+
+      {/* About Me Section */}
+      <div className="mb-8 lg:mx-40 border-l-4 pl-4">
+        <h3 className="text-4xl font-bold text-black mb-2">
+          I am  a Full-Stack Developer
+        </h3>
+        <p className="text-gray-700 text-xl">I specialize in web development and am proficient in various technologies:</p>
+      </div>
+
+      {/* Technologies Section */}
+      <div className="flex flex-wrap gap-4 lg:mx-40 mb-8">
+        {techData.map((tech, index) => (
+          <div
+            key={index}
+            className="flex items-center text-xl gap-2 shadow-xl px-5 py-2 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 bg-gray-100"
+          >
+            <div className="text-2xl">{tech.icon}</div>
+            <span className="text-gray-700 font-semibold">{tech.name}</span>
+          </div>
+        ))}
+      </div>
 
       {/* Education Section */}
       {educationData.map((edu, index) => (
@@ -69,10 +104,7 @@ const EducationAndCertificates = () => {
       ))}
 
       {/* Certificates Section */}
-      <h2 className="text-2xl font-semibold text-center text-green-700 mt-8 mb-4">
-        Certifications
-      </h2>
-
+      <h2 className="text-2xl font-semibold text-center text-green-700 mt-8 mb-4">Certifications</h2>
       {certificatesData.map((cert, index) => (
         <div key={index} className="mb-8 lg:mx-40 border-l-4 border-yellow-500 pl-4">
           <h3 className="text-xl font-bold text-black flex items-center mb-2">
