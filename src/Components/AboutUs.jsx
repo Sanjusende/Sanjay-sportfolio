@@ -52,9 +52,9 @@ const certificatesData = [
 const EducationAndCertificates = () => {
   return (
     
-    <section className="container mx-auto p-4 rounded-lg shadow-md max-h-[500px] overflow-y-auto">
+    <section className="container mt-28 mx-auto p-4 rounded-lg shadow-md max-h-[500px] overflow-y-auto">
       <h1 className="flex justify-center mb-8 items-center text-5xl mt-4 lg:text-6xl tracking-widest text-gray-500 font-bold">
-        <span className="text-[var(--orange-color)]">A</span>bout
+        <span className="text-[var(--orange-color)]">A</span>bout-Us
       </h1>
 
       {/* Education Section */}

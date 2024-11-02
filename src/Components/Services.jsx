@@ -22,7 +22,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="Services" className="mt-16 ml-4 lg:ml-0">
+    <section id="Services" className="mt-28 ml-4 lg:ml-0">
       <h1 className="flex justify-center items-center text-5xl lg:text-6xl tracking-widest text-gray-500 mb-8 font-bold">
         <span className="text-[var(--orange-color)]">S</span>ervices
       </h1>

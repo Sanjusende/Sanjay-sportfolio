@@ -79,7 +79,7 @@ const Skill = () => {
   }, []);
 
   return (
-    <section className="text-white py-12 px-6 md:px-12 lg:px-24 overflow-hidden relative">
+    <section className="text-white mt-10 py-12 px-6 md:px-12 lg:px-24 overflow-hidden relative">
       {/* Skills Progress Section */}
       <div className="max-w-7xl mx-auto mt-6 text-center" ref={skillsRef}>
         <h1 className="flex mb-5 justify-center items-center text-4xl lg:text-6xl tracking-widest text-gray-500 font-bold">

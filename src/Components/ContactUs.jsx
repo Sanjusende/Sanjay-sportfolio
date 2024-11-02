@@ -66,9 +66,9 @@ const Contact = () => {
   ];
 
   return (
-    <section id="Contact mt-8  ">
-      <h1 className="flex justify-center items-center text-5xl mt-16 lg:text-6xl tracking-widest text-gray-500 font-bold">
-        <span className="text-[var(--orange-color)]">C</span>ontact
+    <section id="Contact   ">
+      <h1 className="flex mt-32  justify-center items-center text-5xl  lg:text-6xl tracking-widest text-gray-500 font-bold">
+        <span className="text-[var(--orange-color)]">C</span>ontact-Us
       </h1>
 
       <div className="flex justify-evenly lg:flex-row flex-col gap-10 mt-8">

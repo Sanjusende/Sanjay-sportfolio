@@ -73,7 +73,7 @@ const works = [
 
 const MyWorks = () => {
   return (
-    <section className="my-works bg-gray-100 py-10">
+    <section className="my-works mt-10 bg-gray-100 py-10">
       <div className="container mx-auto px-5">
         <h1 className="flex justify-center items-center mb-5 text-5xl mt-16 lg:text-6xl tracking-widest text-gray-500 font-bold">
           <span className="text-[var(--orange-color)]">M</span>y Works
