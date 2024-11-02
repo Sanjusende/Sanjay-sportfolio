@@ -66,7 +66,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="Contact">
+    <section id="Contact mt-8  ">
       <h1 className="flex justify-center items-center text-5xl mt-16 lg:text-6xl tracking-widest text-gray-500 font-bold">
         <span className="text-[var(--orange-color)]">C</span>ontact
       </h1>

@@ -62,6 +62,8 @@ const Hero = () => {
         </section>
         {/* Home Section End */}
       </div>
+     
+
     );
 };
 

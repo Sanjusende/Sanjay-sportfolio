@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; 
 import { ImCross } from "react-icons/im";
+import sanju from '../assets/sanju.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,8 +10,17 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const navItems = [
+    { name: 'Home', to: '/' },
+    { name: 'About Us', to: '/about-us' },
+    { name: 'Skills', to: '/skills' },
+    { name: 'Services', to: '/services' },
+    { name: 'Portfolio', to: '/portfolio' },
+    { name: 'Contact Us', to: '/contact-us' },
+  ];
+
   return (
-    <header className="fixed w-full z-50 top-0 bg-[var(--bg-color)] dark:bg-gray-800 shadow-md">
+    <header className="fixed w-full z-50 top-0 mb-10 bg-[var(--bg-color)] dark:bg-gray-800 shadow-md">
       <div className="container mx-auto px-4 lg:px-8 mt-4">
         <nav className="flex items-center justify-between py-4">
           {/* Logo */}
@@ -21,7 +31,7 @@ const Navbar = () => {
 
           {/* Center Image and Search Bar */}
           <div className="flex items-center mx-auto">
-            <img src="./src/assets/sanju.png" alt="Logo" className="h-10 mr-5 rounded-full hidden lg:block bg-gray-200" />
+            <img src={sanju} alt="Logo" className="h-10 mr-5 rounded-full hidden lg:block bg-gray-200" />
             <input 
               type="text" 
               placeholder="Search..." 
@@ -31,17 +41,15 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <ul className="hidden lg:flex space-x-8">
-            {['Home', 'About Us', 'Skills', 'Services', 'Portfolio', 'Contact Us'].map((item, index) => (
+            {navItems.map((item, index) => (
               <li key={index} className="group relative">
                 <Link 
-                  to={`/${item.toLowerCase().replace(/\s/g, '')}`} 
+                  to={item.to}
                   className="text-lg font-semibold text-black dark:text-gray-300 transition duration-300 flex items-center relative"
                 >
                   {/* First letter styling */}
-                  <span className="group-hover:text-yellow-500">
-                    {item.charAt(0)}
-                  </span>
-                  {item.slice(1)}
+                  <span className="group-hover:text-yellow-500">{item.name.charAt(0)}</span>
+                  {item.name.slice(1)}
                   {/* Border Animation */}
                   <span className="absolute left-0 bottom-0 w-full h-0.5 bg-[var(--orange-color)] scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-500"></span>
                 </Link>
@@ -78,18 +86,16 @@ const Navbar = () => {
 
               {/* Mobile Menu Links */}
               <ul className="space-y-6">
-                {['Home', 'About Us', 'Skills', 'Services', 'Portfolio', 'Contact Us'].map((item, index) => (
+                {navItems.map((item, index) => (
                   <li key={index} className="relative">
                     <Link 
-                      to={`/${item.toLowerCase().replace(/\s/g, '')}`} 
+                      to={item.to}
                       onClick={toggleMenu} 
                       className="text-lg text-gray-700 dark:text-gray-300 transition duration-300 flex items-center relative group"
                     >
                       {/* First letter styling */}
-                      <span className="group-hover:text-yellow-500">
-                        {item.charAt(0)}
-                      </span>
-                      {item.slice(1)}
+                      <span className="group-hover:text-yellow-500">{item.name.charAt(0)}</span>
+                      {item.name.slice(1)}
                       {/* Border Animation */}
                       <span className="absolute left-0 bottom-0 w-24 h-0.5 bg-[var(--orange-color)] scale-x-0 group-hover:scale-x-100 transition-transform origin-center duration-500"></span>
                     </Link>
