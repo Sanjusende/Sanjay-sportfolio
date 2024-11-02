@@ -1,36 +1,30 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
-import './App.css'
+import About from './Components/AboutUs';
+import Skill from './Components/Skills';
 import Services from './Components/Services';
+import Portfolio from './Components/Portfolio';
 import Contact from './Components/ContactUs';
 import Footer from './Components/Footer';
 import GoToTop from './Components/GoToTop';
-import About from './Components/AboutUs';
-import Skill from './Components/Skills';
-import Portfolio from './Components/Portfolio';
-
-
+import './App.css';
+import Home from './Pages/Home';
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <Hero />
-      <Skill/>
-      <About/>
-      <Services />
-      <Portfolio/>
-      <Contact />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/skills" element={<Skill />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact-us" element={<Contact />} />
+      </Routes>
       <Footer />
       <GoToTop />
-     
-
-
-      <Routes>
-        
-       
-      </Routes>
     </Router>
   );
 }

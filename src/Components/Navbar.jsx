@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 import { ImCross } from "react-icons/im";
 import sanju from '../assets/sanju.png';
 
