@@ -9,7 +9,9 @@ import Contact from './Components/ContactUs';
 import Footer from './Components/Footer';
 import GoToTop from './Components/GoToTop';
 import './App.css';
+
 import Home from './Pages/Home';
+import CardSwap from './Components/Cardswap';
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact-us" element={<Contact />} />
+        <Route path="/swap" element={<CardSwap />} />
       </Routes>
       <Footer />
       <GoToTop />

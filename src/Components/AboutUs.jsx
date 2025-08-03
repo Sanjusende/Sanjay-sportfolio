@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaGraduationCap, FaBriefcase, FaCertificate } from "react-icons/fa";
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaBootstrap, FaGithub, FaJava } from "react-icons/fa";
 import { SiTailwindcss, SiExpress, SiMongodb } from "react-icons/si";
@@ -66,66 +67,94 @@ const techData = [
 
 const EducationAndCertificates = () => {
   return (
-    <section className="container mt-28 mx-auto p-4 rounded-lg shadow-md overflow-y-auto flex">
-      <div className="w-full">
+    <section className="container mt-28 mx-auto p-4 rounded-lg shadow-md overflow-y-auto flex flex-col gap-12">
       
-        <h1 className="flex justify-center mb-8 items-center text-3xl mt-4 lg:text-5xl tracking-widest text-gray-500 font-bold">
-          <span className="text-gray-600  text-3xl lg:text-5xl">01.</span>
-          <span className="text-[var(--orange-color)] border-b-2 px-2 py-1 rounded-2xl border-gray-500">A</span>bout-Us
-          <div className="flex items-center pl-3">
-                        <span className="block w-20 lg:w-24 h-1 rounded bg-[#fe9901]"></span>
-                    </div>
-        </h1>
-
-        
-
-        {/* About Me Section */}
-        <div className="mb-8 lg:mx-40 border-l-4 pl-4">
-          <h3 className="lg:text-4xl text-3xl font-bold text-black mb-2">
-            I am a Full-Stack Developer
-          </h3>
-          <p className="text-gray-700 text-xl">I specialize in web development and am proficient in various technologies:</p>
+      {/* Heading */}
+      <motion.h1
+        className="flex justify-center mb-8 items-center text-3xl lg:text-5xl tracking-widest text-gray-500 font-bold"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <span className="text-gray-600 text-3xl lg:text-5xl">01.</span>
+        <span className="text-[var(--orange-color)] border-b-2 px-2 py-1 rounded-2xl border-gray-500">A</span>bout-Us
+        <div className="flex items-center pl-3">
+          <span className="block w-20 lg:w-24 h-1 rounded bg-[#fe9901]"></span>
         </div>
+      </motion.h1>
 
-        {/* Technologies Section */}
-        <div className="flex flex-wrap gap-4 lg:mx-40 mb-8">
-          {techData.map((tech, index) => (
-            <div
-              key={index}
-              className="flex items-center text-xl gap-2 shadow-xl px-5 py-2 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 bg-gray-100"
-            >
-              <div className="text-2xl">{tech.icon}</div>
-              <span className="text-gray-700 font-semibold">{tech.name}</span>
-            </div>
-          ))}
-        </div>
+      {/* About Me */}
+      <motion.div
+        className="mb-8 lg:mx-40 border-l-4 pl-4"
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        <h3 className="lg:text-4xl text-3xl font-bold text-black mb-2">I am a Full-Stack Developer</h3>
+        <p className="text-gray-700 text-xl">
+          I specialize in web development and am proficient in various technologies:
+        </p>
+      </motion.div>
 
-        {/* Education Section */}
-        {educationData.map((edu, index) => (
-          <div key={index} className="mb-8 lg:mx-40 border-l-4 border-yellow-500 pl-4">
-            <h3 className="text-xl font-bold text-black flex items-center mb-2">
-              {edu.icon} {edu.institution}
-            </h3>
-            <p className="text-sm text-gray-500">{edu.date}</p>
-            <p className="text-gray-700">{edu.description}</p>
-          </div>
-        ))}
-
-        {/* Certificates Section */}
-        <h2 className="text-2xl font-semibold text-center text-green-700 mt-8 mb-4">Certifications</h2>
-        {certificatesData.map((cert, index) => (
-          <div key={index} className="mb-8 lg:mx-40 border-l-4 border-yellow-500 pl-4">
-            <h3 className="text-xl font-bold text-black flex items-center mb-2">
-              {cert.icon} {cert.title}
-            </h3>
-            <p className="text-sm text-gray-500">{cert.date}</p>
-            <p className="text-gray-700">{cert.description}</p>
-          </div>
+      {/* Technologies */}
+      <div className="flex flex-wrap gap-4 lg:mx-40 mb-8">
+        {techData.map((tech, index) => (
+          <motion.div
+            key={index}
+            className="flex items-center text-xl gap-2 shadow-xl px-5 py-2 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 bg-gray-100"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+          >
+            <div className="text-2xl">{tech.icon}</div>
+            <span className="text-gray-700 font-semibold">{tech.name}</span>
+          </motion.div>
         ))}
       </div>
 
-      {/* Vertical Line */}
-      <div className="hidden lg:block w-1 bg-yellow-500 h-auto ml-4"></div>
+      {/* Education (Left Side Animation) */}
+      {educationData.map((edu, index) => (
+        <motion.div
+          key={index}
+          className="mb-8 lg:mx-40 border-l-4 border-yellow-500 pl-4"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.2 }}
+        >
+          <h3 className="text-xl font-bold text-black flex items-center mb-2">
+            {edu.icon} {edu.institution}
+          </h3>
+          <p className="text-sm text-gray-500">{edu.date}</p>
+          <p className="text-gray-700">{edu.description}</p>
+        </motion.div>
+      ))}
+
+      {/* Certificates Heading */}
+      <motion.h2
+        className="text-2xl font-semibold text-center text-green-700 mt-8 mb-4"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        Certifications
+      </motion.h2>
+
+      {/* Certificates (Right Side Animation) */}
+      {certificatesData.map((cert, index) => (
+        <motion.div
+          key={index}
+          className="mb-8 lg:mx-40 border-l-4 border-yellow-500 pl-4"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.2 }}
+        >
+          <h3 className="text-xl font-bold text-black flex items-center mb-2">
+            {cert.icon} {cert.title}
+          </h3>
+          <p className="text-sm text-gray-500">{cert.date}</p>
+          <p className="text-gray-700">{cert.description}</p>
+        </motion.div>
+      ))}
     </section>
   );
 };
