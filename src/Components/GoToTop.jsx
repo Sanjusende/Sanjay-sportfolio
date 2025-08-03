@@ -7,7 +7,7 @@ import { AiFillPhone } from "react-icons/ai"; // Call icon
 const socialLinks = [
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com",
+    href: "https://www.linkedin.com/in/sanjay-sende-20a3b3278/",
     icon: (
       <FaLinkedin className="text-white bg-indigo-600 p-2 rounded w-14 h-14 hover:bg-indigo-500 transition duration-300" />
     ),
@@ -15,7 +15,7 @@ const socialLinks = [
   },
   {
     name: "Instagram",
-    href: "https://www.instagram.com",
+    href: "https://www.instagram.com/sanjusende_/profilecard/?igsh=emlra21qenpqMXZy",
     icon: (
       <FaInstagram className="text-white bg-pink-500 p-2 rounded w-14 h-14 hover:bg-pink-400 transition duration-300" />
     ),
@@ -23,7 +23,7 @@ const socialLinks = [
   },
   {
     name: "Facebook",
-    href: "https://www.facebook.com",
+    href: "https://www.facebook.com/share/1CvydQr5bb/",
     icon: (
       <FaFacebook className="text-white bg-blue-600 p-2 rounded w-14 h-14 hover:bg-blue-500 transition duration-300" />
     ),
@@ -42,21 +42,21 @@ const socialLinks = [
 const contactIcons = [
   {
     name: "WhatsApp",
-    href: "https://wa.me/your_whatsapp_number",
+    href: "https://web.whatsapp.com/send?phone=918815926552",
     icon: <FaWhatsapp className="text-2xl" />,
     bgColor: "bg-green-500",
     tooltipBg: "bg-green-700",
   },
   {
     name: "Call",
-    href: "tel:+your_phone_number",
+    href: "tel:+918815926552",
     icon: <AiFillPhone className="text-2xl" />,
     bgColor: "bg-blue-500",
     tooltipBg: "bg-blue-700",
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com",
+    href: "https://www.linkedin.com/in/sanjay-sende-20a3b3278/",
     icon: <FaLinkedin className="text-2xl" />,
     bgColor: "bg-indigo-600",
     tooltipBg: "bg-indigo-700",
