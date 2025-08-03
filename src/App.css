@@ -20,7 +20,10 @@
     Height:100%;
     background-color: var(--bg-color);
     overflow-wrap: inherit;
-    
+   
+  overflow-x: hidden;
+
+
     }
     
     

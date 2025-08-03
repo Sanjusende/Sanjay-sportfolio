@@ -5,7 +5,7 @@ import sanju from '../assets/sanju.png';
 
 const Hero = () => {
   return (
-    <div className="head lg:mt-5 mt-28 font-serif">
+    <div className="head lg:mt-9 mt-[5.7rem]  font-serif">
       {/* Home Section Start */}
       <section id="Home" className="bg-[var(--bg-color)] dark:text-gray-100">
         <div className="container mx-auto flex flex-col justify-center sm:py-12 lg:py-24 lg:flex-row lg:justify-evenly">
@@ -23,16 +23,16 @@ const Hero = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Hello, I am Sanjay Sende
+              <h1>Hello, I am Sanjay Sende</h1>
             </motion.h3>
 
             <motion.h1
-              className="lg:text-4xl text-[3rem] mb-4 text-[var(--orange-color)] font-bold"
+              className="lg:text-4xl text-4xl mb-2 text-[var(--orange-color)] font-bold"
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Typewriter
+              <Typewriter className="text-xl lg:text-5xl"
                 words={['Full Stack Developer', 'UI/UX Designer']}
                 loop={true}
                 cursor
@@ -49,9 +49,14 @@ const Hero = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              Skilled Full Stack Developer with expertise in front-end (HTML, CSS, JavaScript, React) and back-end (Node.js, MongoDB, MySQL) technologies. 
-              <br className="hidden md:inline lg:hidden" />
-              Experienced in building scalable web apps, developing APIs, and deploying to cloud platforms like AWS. Passionate about clean, efficient code and enhancing user experiences.
+             
+<p className="mt-4 text-xl lg:text-2xl text-gray-700 dark:text-gray-300">
+  I’m <strong>Sanjay Sende</strong>, a <strong>Full Stack Web Developer</strong> based in 
+  <strong> Balaghat, Madhya Pradesh</strong>. I build modern, responsive websites and web apps 
+  using <strong>React.js, Node.js, MongoDB</strong> and other latest technologies. My focus is on 
+  clean, efficient code and creating solutions that perform seamlessly.
+</p>
+
             </motion.p>
 
             {/* Buttons */}

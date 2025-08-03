@@ -67,7 +67,7 @@ const techData = [
 
 const EducationAndCertificates = () => {
   return (
-    <section className="container mt-28 mx-auto p-4 rounded-lg shadow-md overflow-y-auto flex flex-col gap-12">
+    <section className="container mt-28 overflow-x-hidden p-4 rounded-lg shadow-md overflow-y-auto flex flex-col gap-12">
       
       {/* Heading */}
       <motion.h1
