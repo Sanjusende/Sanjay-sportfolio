@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Typewriter } from 'react-simple-typewriter';
-import sanju from '../assets/sanju.png';
+import React from "react";
+import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
+import sanju from "../assets/sanju.png";
 
 const Hero = () => {
   return (
@@ -9,7 +9,6 @@ const Hero = () => {
       {/* Home Section Start */}
       <section id="Home" className="bg-[var(--bg-color)] dark:text-gray-100">
         <div className="container mx-auto flex flex-col justify-center sm:py-12 lg:py-24 lg:flex-row lg:justify-evenly">
-          
           {/* Content Section */}
           <motion.div
             className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left"
@@ -32,8 +31,9 @@ const Hero = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Typewriter className="text-xl lg:text-5xl"
-                words={['Full Stack Developer', 'UI/UX Designer']}
+              <Typewriter
+                className="text-xl lg:text-5xl"
+                words={["Full Stack Developer", "UI/UX Designer"]}
                 loop={true}
                 cursor
                 cursorStyle="|"
@@ -49,14 +49,15 @@ const Hero = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-             
-<p className="mt-4 text-xl lg:text-2xl text-gray-700 dark:text-gray-300">
-  I’m <strong>Sanjay Sende</strong>, a <strong>Full Stack Web Developer</strong> based in 
-  <strong> Balaghat, Madhya Pradesh</strong>. I build modern, responsive websites and web apps 
-  using <strong>React.js, Node.js, MongoDB</strong> and other latest technologies. My focus is on 
-  clean, efficient code and creating solutions that perform seamlessly.
-</p>
-
+              <p className="mt-4 text-xl lg:text-2xl text-gray-700 dark:text-gray-300">
+                I’m <strong>Sanjay Sende</strong>, a{" "}
+                <strong>Full Stack Web Developer</strong> based in
+                <strong> Balaghat, Madhya Pradesh</strong>. I build modern,
+                responsive websites and web apps using{" "}
+                <strong>React.js, Node.js, MongoDB</strong> and other latest
+                technologies. My focus is on clean, efficient code and creating
+                solutions that perform seamlessly.
+              </p>
             </motion.p>
 
             {/* Buttons */}
@@ -92,14 +93,13 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             whileHover={{ scale: 1.05, y: -10 }}
           >
-            <img 
+            <img
               id="profile-img"
               src={sanju}
               alt="Sanjay"
               className="object-contain h-full w-full"
             />
           </motion.div>
-
         </div>
       </section>
       {/* Home Section End */}

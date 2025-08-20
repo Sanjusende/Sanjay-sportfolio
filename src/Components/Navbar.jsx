@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ImCross } from "react-icons/im";
 import sanju from '../assets/sanju.png';
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,11 +23,10 @@ const Navbar = () => {
   return (
     <header className="fixed w-full z-50 top-0 mb-10 bg-[var(--bg-color)] dark:bg-gray-800 shadow-md">
       <div className="container mx-auto px-4 lg:px-8 mt-4">
-        <nav className="flex items-center justify-between py-4">
+        <nav className="flex items-center justify-between ">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className="text-5xl font-extrabold text-yellow-500 hover:text-gray-500">S</span>
-            <span className="text-2xl font-semibold text-black hover:text-yellow-500 dark:text-gray-300">anju</span>
+            <span className=" m-0 p-0"><img  className="lg:h-24 lg:w-24 h-14 w-14 " src={logo} alt="Logo" /></span>
           </Link>
 
           {/* Center Image and Search Bar */}
