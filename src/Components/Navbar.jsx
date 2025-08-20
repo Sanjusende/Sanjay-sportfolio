@@ -26,7 +26,7 @@ const Navbar = () => {
         <nav className="flex items-center justify-between ">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <span className=" m-0 p-0"><img  className="lg:h-24 lg:w-24 h-14 w-14 " src={logo} alt="Logo" /></span>
+            <span className=" m-0 p-0"><img  className="lg: ml-0 lg:h-24 lg:w-24 h-14 w-14 " src={logo} alt="Logo" /></span>
           </Link>
 
           {/* Center Image and Search Bar */}
