@@ -3,6 +3,7 @@ import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import rsphotography from "../assets/rsphotography.png";
 import { useInView } from 'react-intersection-observer';
 import Calculator from "../assets/calculator.png";
 import todo from "../assets/todo.jpeg";
@@ -22,15 +23,7 @@ const works = [
     live: "https://movieseatbook.vercel.app/",
     category: "fullstack"
   },
-  {
-    title: "GOLF",
-    description: "Make this project on HTML, CSS, JavaScript, and GSAP.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    image: Golf,
-    github: "https://github.com/Sanjusende/firstwebsite",
-    live: "https://sanjay-ivory.vercel.app/",
-    category: "frontend"
-  },
+
   {
     title: "Workex",
     description: "A job portal application that connects job seekers with employers.",
@@ -40,24 +33,23 @@ const works = [
     live: "https://workex.vercel.app/",
     category: "fullstack"
   },
+
   {
-    title: "Calculator",
-    description: "A calculator app with responsive design.",
-    tech: ["React.js", "TailwindCSS", "HTML", "CSS"],
-    image: Calculator,
-    github: "https://github.com/Sanjusende/Todo_App",
-    live: "https://todo-app.vercel.app/",
-    category: "frontend"
-  },
-  {
-    title: "Todoist",
-    description: "A task management app with a clean interface.",
-    tech: ["React.js", "TailwindCSS", "HTML", "CSS"],
-    image: todo,
-    github: "https://github.com/Sanjusende/Todo_App",
-    live: "https://todo-app.vercel.app/",
-    category: "frontend"
-  },
+    title: "RS Photography",
+    description: "A full-stack photography portfolio and management application built to showcase photography work and manage portfolio content.",
+    tech: [
+      "React.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JavaScript"
+    ],
+    image: rsphotography,
+    github: "https://github.com/Sanjusende/rsphotography",
+    live: "https://rsphotography.vercel.app/",
+    category: "fullstack"
+  }
 ];
 
 const filters = [
