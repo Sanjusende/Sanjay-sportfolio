@@ -4,16 +4,31 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import rsphotography from "../assets/rsphotography.png";
-import { useInView } from 'react-intersection-observer';
-import Calculator from "../assets/calculator.png";
-import todo from "../assets/todo.jpeg";
-import Golf from "../assets/project2.png";
+
+import krishimitra from "../assets/krishimitra.png";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const works = [
+  {
+    title: "KrishiMitra",
+    description: "AI-powered smart farming platform that provides real-time weather insights, irrigation recommendations, mandi market prices, and intelligent agricultural assistance to help farmers make better decisions.",
+    tech: [
+      "React.js",
+      "TailwindCSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "REST API"
+    ],
+    image: krishimitra,
+    github: "https://github.com/Sanjusende/HackInMotion-RICR-HIM-1157",
+    live: "https://krishimitra2026.vercel.app/",
+    category: "fullstack"
+  },
   {
     title: "Movie Seat Booking",
     description: "The movie seat booking feature enables users to view seat availability.",
