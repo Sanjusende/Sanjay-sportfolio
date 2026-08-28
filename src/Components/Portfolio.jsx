@@ -4,16 +4,43 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import rsphotography from "../assets/rsphotography.png";
-import { useInView } from 'react-intersection-observer';
-import Calculator from "../assets/calculator.png";
-import todo from "../assets/todo.jpeg";
-import Golf from "../assets/project2.png";
+import real_state from "../assets/real_state.png";
+
+import krishimitra from "../assets/krishi_mitra.png";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const works = [
+  {
+    title: "KrishiMitra",
+    description: "AI-powered smart farming platform that provides real-time weather insights, irrigation recommendations, mandi market prices, and intelligent agricultural assistance to help farmers make better decisions.",
+    tech: [
+      "React.js",
+      "TailwindCSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "REST API"
+    ],
+    image: krishimitra,
+    github: "https://github.com/Sanjusende/HackInMotion-RICR-HIM-1157",
+    live: "https://krishimitra2026.vercel.app/",
+    category: "fullstack"
+  },
+
+  {
+    title: "Real Estate Management System",
+    description: "A full-stack real estate platform for browsing, searching, buying, and renting properties with user authentication, property listings, filters, and agent contact features.",
+    tech: ["React.js", "Tailwind CSS", "Redux Toolkit", "Node.js", "Express.js", "MongoDB"],
+    image: real_state,
+    github: "https://github.com/Sanjusende/Real_State_Managment_System",
+    live: "https://real-state-managment-system.vercel.app/", category: "fullstack"
+  }
+  ,
+
   {
     title: "Movie Seat Booking",
     description: "The movie seat booking feature enables users to view seat availability.",
@@ -24,16 +51,7 @@ const works = [
     category: "fullstack"
   },
 
-  {
-    title: "Workex",
-    description: "A job portal application that connects job seekers with employers.",
-    tech: ["React.js", "TailwindCSS", "HTML", "CSS", "JavaScript"],
-    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
-    github: "https://github.com/Sanjusende/workex",
-    live: "https://workex.vercel.app/",
-    category: "fullstack"
-  },
-
+  
   {
     title: "RS Photography",
     description: "A full-stack photography portfolio and management application built to showcase photography work and manage portfolio content.",
