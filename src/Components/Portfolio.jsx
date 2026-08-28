@@ -3,10 +3,10 @@ import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+
 import rsphotography from "../assets/rsphotography.png";
 import real_state from "../assets/real_state.png";
-
-import krishimitra from "../assets/krishi_mitra.png";
+import krishi_mitra from "../assets/krishi_mitra.png";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -25,7 +25,7 @@ const works = [
       "JWT",
       "REST API"
     ],
-    image: krishimitra,
+    image: krishi_mitra,
     github: "https://github.com/Sanjusende/HackInMotion-RICR-HIM-1157",
     live: "https://krishimitra2026.vercel.app/",
     category: "fullstack"
@@ -34,12 +34,19 @@ const works = [
   {
     title: "Real Estate Management System",
     description: "A full-stack real estate platform for browsing, searching, buying, and renting properties with user authentication, property listings, filters, and agent contact features.",
-    tech: ["React.js", "Tailwind CSS", "Redux Toolkit", "Node.js", "Express.js", "MongoDB"],
+    tech: [
+      "React.js",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "Node.js",
+      "Express.js",
+      "MongoDB"
+    ],
     image: real_state,
     github: "https://github.com/Sanjusende/Real_State_Managment_System",
-    live: "https://real-state-managment-system.vercel.app/", category: "fullstack"
-  }
-  ,
+    live: "https://real-state-managment-system.vercel.app/",
+    category: "fullstack"
+  },
 
   {
     title: "Movie Seat Booking",
@@ -51,7 +58,6 @@ const works = [
     category: "fullstack"
   },
 
-  
   {
     title: "RS Photography",
     description: "A full-stack photography portfolio and management application built to showcase photography work and manage portfolio content.",
