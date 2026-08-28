@@ -3,9 +3,10 @@ import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import rsphotography from "../assets/rsphotography.png";
 
-import krishimitra from "../assets/krishimitra.png";
+import rsphotography from "../assets/rsphotography.png";
+import real_state from "../assets/real_state.png";
+import krishi_mitra from "../assets/krishi_mitra.png";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -24,9 +25,25 @@ const works = [
       "JWT",
       "REST API"
     ],
-    image: krishimitra,
+    image: krishi_mitra,
     github: "https://github.com/Sanjusende/HackInMotion-RICR-HIM-1157",
     live: "https://krishimitra2026.vercel.app/",
+    category: "fullstack"
+  },
+  {
+    title: "Real Estate Management System",
+    description: "A full-stack real estate platform for browsing, searching, buying, and renting properties with user authentication, property listings, filters, and agent contact features.",
+    tech: [
+      "React.js",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "Node.js",
+      "Express.js",
+      "MongoDB"
+    ],
+    image: real_state,
+    github: "https://github.com/Sanjusende/Real_State_Managment_System",
+    live: "https://real-state-managment-system.vercel.app/",
     category: "fullstack"
   },
   {
@@ -36,16 +53,6 @@ const works = [
     image: "https://images.pexels.com/photos/7991379/pexels-photo-7991379.jpeg?auto=compress&cs=tinysrgb&w=800",
     github: "https://github.com/Sanjusende/HashedBit-Internship",
     live: "https://movieseatbook.vercel.app/",
-    category: "fullstack"
-  },
-
-  {
-    title: "Workex",
-    description: "A job portal application that connects job seekers with employers.",
-    tech: ["React.js", "TailwindCSS", "HTML", "CSS", "JavaScript"],
-    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
-    github: "https://github.com/Sanjusende/workex",
-    live: "https://workex.vercel.app/",
     category: "fullstack"
   },
 
