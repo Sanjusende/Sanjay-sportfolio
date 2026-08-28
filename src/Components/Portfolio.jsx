@@ -30,7 +30,6 @@ const works = [
     live: "https://krishimitra2026.vercel.app/",
     category: "fullstack"
   },
-
   {
     title: "Real Estate Management System",
     description: "A full-stack real estate platform for browsing, searching, buying, and renting properties with user authentication, property listings, filters, and agent contact features.",
@@ -47,7 +46,6 @@ const works = [
     live: "https://real-state-managment-system.vercel.app/",
     category: "fullstack"
   },
-
   {
     title: "Movie Seat Booking",
     description: "The movie seat booking feature enables users to view seat availability.",
