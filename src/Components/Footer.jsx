@@ -1,60 +1,144 @@
 import React from 'react';
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaSun, FaHeart, FaInstagram, FaFacebook, FaWhatsapp } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <div className="bg-white pt-4  sm:pt-10 lg:pt-12">
-      <footer className="mx-auto max-w-screen-2xl px-4 md:px-8">
-        <div className="flex flex-col items-center border-t pt-6">
-          {/* nav - start */}
-          <nav className="mb-4 flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start md:gap-6">
-            <a href="#About" className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">
-              About
-            </a>
-            <a href="#" className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">
-              Investor Relations
-            </a>
-            <a href="#" className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">
-              Jobs
-            </a>
-            <a href="#" className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">
-              Press
-            </a>
-            <a href="#" className="text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600">
-              Blog
-            </a>
-          </nav>
-          {/* nav - end */}
+    <footer className="bg-[#0e1726] text-white pt-16 pb-12 relative overflow-hidden">
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-          {/* social - start */}
-          <div className="flex mb-5 gap-4">
-            <a href="https://www.instagram.com/yourprofile" target="_blank" className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600" rel="noreferrer">
-              <svg className="h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-              </svg>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+          
+          {/* Brand & Bio (4 Cols) */}
+          <div className="lg:col-span-4 flex flex-col space-y-4">
+            <a href="#home" className="flex items-center gap-2">
+              <span className="text-2xl font-bold tracking-tight text-white">Sanjay</span>
+              <FaSun className="text-[#fbb034] text-lg" />
+              <span className="text-xs font-handwriting text-2xl text-[#38bdf8] ml-[-2px] pt-1">
+                .dev
+              </span>
             </a>
-
-            <a href="#" target="_blank" className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600" rel="noreferrer">
-              <svg className="h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-              </svg>
-            </a>
-
-            <a href="https://www.linkedin.com/in/sanjay-sende-20a3b3278" target="_blank" className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600" rel="noreferrer">
-              <svg className="h-5 w-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-              </svg>
-            </a>
-
-            <a href="https://github.com/Sanjaysende" target="_blank" className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600" rel="noreferrer">
-              <svg className="h-5 w-5" width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 0c-6.627 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.111.82-.261.82-.577v-2.025c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.089-.744.083-.729.083-.729 1.205.084 1.839 1.236 1.839 1.236 1.07 1.834 2.809 1.305 3.495.998.108-.774.418-1.305.762-1.605-2.665-.305-5.466-1.333-5.466-5.931 0-1.311.469-2.381 1.236-3.22-.124-.305-.536-1.529.118-3.18 0 0 1.008-.323 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.005.404 2.29-1.553 3.297-1.23 3.297-1.23.656 1.651.244 2.875.12 3.18.77.839 1.235 1.909 1.235 3.22 0 4.61-2.804 5.624-5.475 5.921.429.37.824 1.101.824 2.219v3.293c0 .319.218.694.825.577 4.765-1.585 8.202-6.082 8.202-11.384 0-6.627-5.373-12-12-12z" />
-              </svg>
-            </a>
+            <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
+              Full-Stack MERN Developer crafting practical, scalable, and high-performance web applications with clean code architecture and AI technologies.
+            </p>
+            <div className="flex flex-wrap items-center gap-2.5 pt-2">
+              <a
+                href="https://github.com/Sanjusende"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-white/5 hover:bg-white hover:text-[#0e1726] text-slate-300 flex items-center justify-center transition-all"
+                title="GitHub"
+              >
+                <FaGithub size={14} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/sanjay-sende-20a3b3278/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-white/5 hover:bg-[#0077b5] hover:text-white text-slate-300 flex items-center justify-center transition-all"
+                title="LinkedIn"
+              >
+                <FaLinkedin size={14} />
+              </a>
+              <a
+                href="https://www.instagram.com/sanjusende_/profilecard/?igsh=emlra21qenpqMXZy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-white/5 hover:bg-pink-600 hover:text-white text-slate-300 flex items-center justify-center transition-all"
+                title="Instagram"
+              >
+                <FaInstagram size={14} />
+              </a>
+              <a
+                href="https://www.facebook.com/share/1CvydQr5bb/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-white/5 hover:bg-blue-600 hover:text-white text-slate-300 flex items-center justify-center transition-all"
+                title="Facebook"
+              >
+                <FaFacebook size={14} />
+              </a>
+              <a
+                href="https://web.whatsapp.com/send?phone=918815926552"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-white/5 hover:bg-emerald-600 hover:text-white text-slate-300 flex items-center justify-center transition-all"
+                title="WhatsApp"
+              >
+                <FaWhatsapp size={14} />
+              </a>
+              <a
+                href="https://leetcode.com/u/5xX6DHi5BQ/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-white/5 hover:bg-[#f59e0b] hover:text-[#0e1726] text-slate-300 flex items-center justify-center transition-all"
+                title="LeetCode"
+              >
+                <SiLeetcode size={14} />
+              </a>
+            </div>
           </div>
-          {/* social - end */}
+
+          {/* Quick Links (3 Cols) */}
+          <div className="lg:col-span-3 flex flex-col space-y-3">
+            <span className="text-xs font-mono uppercase tracking-wider text-[#fbb034] font-bold">
+              EXPLORE
+            </span>
+            <ul className="space-y-2 text-xs text-slate-400">
+              <li><a href="#about" className="hover:text-white transition-colors">About Me</a></li>
+              <li><a href="#skills" className="hover:text-white transition-colors">Technical Skills</a></li>
+              <li><a href="#experience" className="hover:text-white transition-colors">Work Experience</a></li>
+              <li><a href="#projects" className="hover:text-white transition-colors">Selected Projects</a></li>
+              <li><a href="#education" className="hover:text-white transition-colors">Education & Degrees</a></li>
+            </ul>
+          </div>
+
+          {/* Contact Details (3 Cols) */}
+          <div className="lg:col-span-3 flex flex-col space-y-3">
+            <span className="text-xs font-mono uppercase tracking-wider text-[#fbb034] font-bold">
+              LET'S CONNECT
+            </span>
+            <div className="space-y-2.5 text-xs text-slate-400">
+              <a href="mailto:shendesanju89@gmail.com" className="flex items-center gap-2 hover:text-white transition-colors">
+                <FaEnvelope className="text-[#38bdf8]" />
+                <span>shendesanju89@gmail.com</span>
+              </a>
+              <a href="tel:+918815926552" className="flex items-center gap-2 hover:text-white transition-colors">
+                <FaPhoneAlt className="text-[#fbb034]" />
+                <span>+91 8815926552</span>
+              </a>
+              <div className="flex items-center gap-2">
+                <FaMapMarkerAlt className="text-emerald-400" />
+                <span>Bhopal, Madhya Pradesh, India</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Circular Badge / Motto (2 Cols - matching the "Design with heart" stamp in reference) */}
+          <div className="lg:col-span-2 flex items-center justify-start lg:justify-center">
+            <div className="w-24 h-24 rounded-full border-2 border-dashed border-[#fbb034]/60 flex flex-col items-center justify-center text-center p-2 transform hover:rotate-12 transition-transform duration-300">
+              <span className="text-[10px] font-handwriting text-lg text-[#fbb034] leading-tight">
+                Built with passion
+              </span>
+              <FaHeart className="text-[#fbb034] text-xs mt-0.5" />
+            </div>
+          </div>
+
         </div>
-      </footer>
-    </div>
+
+        {/* Copyright */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+          <p>© {currentYear} Sanjay Sende. All rights reserved.</p>
+          <p className="font-handwriting text-base text-slate-400">
+            Crafting software that inspires & performs ☀️
+          </p>
+        </div>
+
+      </div>
+    </footer>
   );
 };
 

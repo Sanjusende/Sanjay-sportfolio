@@ -1,3 +1,96 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #faf8f5;
+    --bg-surface: #fcfaf6;
+    --bg-card: #ffffff;
+    --accent-yellow: #fbb034;
+    --accent-blue: #2563eb;
+    --text-primary: #0e1726;
+    --text-secondary: #475569;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #faf8f5;
+  }
+
+  body {
+    background-color: #faf8f5;
+    color: #1e293b;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.025em;
+  }
+
+
+  /* Custom modern warm scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #faf8f5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+    border: 2px solid #faf8f5;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #fbb034;
+  }
+}
+
+@layer utilities {
+  .bg-warm-dots {
+    background-size: 24px 24px;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  }
+
+  .font-handwriting {
+    font-family: 'Caveat', cursive;
+  }
+
+  .blob-yellow {
+    background: linear-gradient(135deg, #fbb034 0%, #f59e0b 100%);
+  }
+
+  .blob-blue {
+    background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%);
+  }
+
+  .card-warm {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .card-warm:hover {
+    border-color: rgba(251, 176, 52, 0.4);
+    box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

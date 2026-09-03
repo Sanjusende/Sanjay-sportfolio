@@ -1,162 +1,149 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { FaGraduationCap, FaBriefcase, FaCertificate } from "react-icons/fa";
-import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaBootstrap, FaGithub, FaJava } from "react-icons/fa";
-import { SiTailwindcss, SiExpress, SiMongodb } from "react-icons/si";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  FaLaptopCode, 
+  FaServer, 
+  FaDatabase, 
+  FaShieldAlt, 
+  FaRobot, 
+  FaProjectDiagram,
+  FaMapMarkerAlt,
+  FaGraduationCap
+} from 'react-icons/fa';
 
-const educationData = [
+const highlights = [
   {
-    institution: "Higher Secondary School",
-    date: "July 2020 - July 2021",
-    description: "I scored 83% in 10th and 83% in 12th. I had Maths and Science subjects in my 11th and 12th. During my school time, I always tried to learn something new and did something new every time.",
-    icon: <FaGraduationCap className="mr-2" />
+    icon: <FaLaptopCode className="text-[#f59e0b] text-xl" />,
+    title: "Full-Stack Development",
+    description: "End-to-end web architecture with React, Node.js, Express, and modern styling tools."
   },
   {
-    institution: "Govt. Polytechnic College Balaghat",
-    date: "Dec 2021 - May 2024",
-    description: "Pursuing a Diploma in Computer Science & Engineering from Govt. Polytechnic College Balaghat, with a strong academic foundation reflected by a CGPA of 7.98. Passionate about leveraging technology to solve real-world problems and continuously learning to stay at the cutting edge of innovation.",
-    icon: <FaGraduationCap className="mr-2" />
+    icon: <FaServer className="text-amber-500 text-xl" />,
+    title: "REST API Development",
+    description: "Designing robust CRUD endpoints, request validation, middleware, and error handling."
   },
   {
-    institution: "Sagar Institute of Research & Technology Bhopal",
-    date: "August 2024 - Running",
-    description: "Sagar Institute of Research & Technology (SIRT) is a self-finance private engineering institute in Bhopal, the capital city of Madhya Pradesh. The institute is approved by AICTE and affiliated with Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV), Bhopal and Barkatullah University, Bhopal for engineering and management programs respectively.",
-    icon: <FaGraduationCap className="mr-2" />
+    icon: <FaDatabase className="text-emerald-500 text-xl" />,
+    title: "MongoDB & Database Design",
+    description: "Data modeling, Mongoose schemas, relationships, indexing, and query optimization."
+  },
+  {
+    icon: <FaShieldAlt className="text-pink-500 text-xl" />,
+    title: "Authentication & Security",
+    description: "Secure user sessions with JWT tokens, bcrypt password hashing, and role-based access."
+  },
+  {
+    icon: <FaRobot className="text-purple-400 text-xl" />,
+    title: "AI Integration",
+    description: "Practical integration of Google Gemini AI APIs for generative assistance and image analysis."
+  },
+  {
+    icon: <FaProjectDiagram className="text-sky-400 text-xl" />,
+    title: "Data Structures & Algorithms",
+    description: "Core computer science fundamentals with 100+ problem solutions solved in Java & JavaScript."
   }
 ];
 
-const certificatesData = [
-  {
-    title: "MERN Stack Internship",
-    date: "Completed on 10 Oct 2023",
-    description: "MERN Stack Intern at Connect Siksha, Balaghat, worked on full-stack web development using MongoDB, Express, React, and Node.js, building responsive and scalable applications.",
-    icon: <FaBriefcase className="mr-2" />
-  },
-  {
-    title: "HashedBit Innovtion Pvt Ltd",
-    date: "27-September 2024, Running",
-    description: "Full-Stack Developer Intern Built full-stack apps using MERN stack Developed responsive UIs with React and Tailwind CSS Created APIs with Node.js and Express Managed MongoDB databases.",
-    icon: <FaBriefcase className="mr-2" />
-  },
-  {
-    title: "State Level Championship Hackathon",
-    date: "Participated on 10 Oct 2023",
-    description: "Showcasing innovative problem-solving and technical skills in a highly competitive environment.",
-    icon: <FaCertificate className="mr-2" />
-  },
-  {
-    title: "Certificate of Industrial Training",
-    date: "Networking, CCNA & Cloud (09 May 2023 - 24 May 2023)",
-    description: "Gained hands-on experience in network management, routing protocols, and cloud technologies. Equipped with skills in designing and securing scalable networks, and proficient in cloud computing environments.",
-    icon: <FaCertificate className="mr-2" />
-  }
-];
-
-const techData = [
-  { name: "HTML", icon: <FaHtml5 className="text-orange-600" /> },
-  { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
-  { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-500" /> },
-  { name: "React.js", icon: <FaReact className="text-blue-400" /> },
-  { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
-  { name: "Bootstrap", icon: <FaBootstrap className="text-purple-600" /> },
-  { name: "Express.js", icon: <SiExpress className="text-gray-700" /> },
-  { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
-  { name: "GitHub", icon: <FaGithub className="text-gray-600" /> },
-  { name: "Java", icon: <FaJava className="text-red-600" /> },
-];
-
-const EducationAndCertificates = () => {
+const AboutUs = () => {
   return (
-    <section className="container mt-28 overflow-x-hidden p-4 rounded-lg shadow-md overflow-y-auto flex flex-col gap-12">
+    <section id="about" className="py-20 bg-[#faf8f5] dark:bg-[#0d0f17] text-slate-800 dark:text-slate-100 relative overflow-hidden transition-colors duration-300">
       
-      {/* Heading */}
-      <motion.h1
-        className="flex justify-center mb-8 items-center text-3xl lg:text-5xl tracking-widest text-gray-500 font-bold"
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <span className="text-gray-600 text-3xl lg:text-5xl">01.</span>
-        <span className="text-[var(--orange-color)] border-b-2 px-2 py-1 rounded-2xl border-gray-500">A</span>bout-Us
-        <div className="flex items-center pl-3">
-          <span className="block w-20 lg:w-24 h-1 rounded bg-[#fe9901]"></span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
+        <div className="flex flex-col items-center text-center mb-16">
+          <span className="text-xs font-bold font-mono uppercase tracking-wider text-[#f59e0b] mb-2">
+            01. BACKGROUND
+          </span>
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0e1726] dark:text-white tracking-tight">
+            Who is <span className="text-[#f59e0b]">Sanjay Sende?</span>
+          </h2>
+          <svg className="w-16 h-2 text-[#fbb034] mt-1" viewBox="0 0 100 12" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+            <path d="M2 6 Q 25 1, 50 6 T 98 6" />
+          </svg>
         </div>
-      </motion.h1>
 
-      {/* About Me */}
-      <motion.div
-        className="mb-8 lg:mx-40 border-l-4 pl-4"
-        initial={{ opacity: 0, x: -30 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
-        <h3 className="lg:text-4xl text-3xl font-bold text-black mb-2">I am a Full-Stack Developer</h3>
-        <p className="text-gray-700 text-xl">
-          I specialize in web development and am proficient in various technologies:
-        </p>
-      </motion.div>
+        {/* Narrative Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-16">
+          
+          {/* Main Story (7 Cols) */}
+          <div className="lg:col-span-7 flex flex-col space-y-4 text-slate-700 dark:text-slate-300 text-base leading-relaxed bg-white dark:bg-[#121624] p-8 rounded-3xl border border-slate-200/80 dark:border-white/10 shadow-md">
+            <p className="text-lg font-bold text-[#0e1726] dark:text-white border-l-4 border-[#fbb034] pl-4 py-1">
+              I'm a Computer Science & Engineering student and Full-Stack MERN Developer focused on building real-world web applications. I work across frontend development, backend APIs, databases, authentication and AI integrations.
+            </p>
+            <p className="text-slate-600 dark:text-slate-300">
+              My development journey includes 3 Software Development Internships (ClaudWent Solution, HashedBit Innovations & Connect Shiksha) with hands-on experience in React.js, Node.js, Express.js, MongoDB, REST APIs, and JWT authentication.
+            </p>
+            <p className="text-slate-600 dark:text-slate-300">
+              I emphasize writing clean, modular code, building intuitive responsive interfaces, and architecting reliable backend services with MongoDB, Express, and Node.js.
+            </p>
 
-      {/* Technologies */}
-      <div className="flex flex-wrap gap-4 lg:mx-40 mb-8">
-        {techData.map((tech, index) => (
-          <motion.div
-            key={index}
-            className="flex items-center text-xl gap-2 shadow-xl px-5 py-2 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 bg-gray-100"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
-          >
-            <div className="text-2xl">{tech.icon}</div>
-            <span className="text-gray-700 font-semibold">{tech.name}</span>
-          </motion.div>
-        ))}
+            <div className="pt-2 flex flex-wrap gap-3 text-xs font-medium text-slate-600 dark:text-slate-400">
+              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10">
+                <FaMapMarkerAlt className="text-[#fbb034]" />
+                <span>Bhopal, MP, India</span>
+              </div>
+              <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10">
+                <FaGraduationCap className="text-[#f59e0b]" />
+                <span>B.Tech in CSE (Exp. 2027)</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Key Engineering Highlights Card (5 Cols) */}
+          <div className="lg:col-span-5 p-7 rounded-3xl bg-white dark:bg-[#121624] border border-slate-200/80 dark:border-white/10 shadow-md">
+            <h3 className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-4 flex items-center justify-between">
+              <span>Engineering Snapshot</span>
+              <span className="text-emerald-600 dark:text-emerald-400 font-bold text-xs bg-emerald-50 dark:bg-emerald-500/10 px-2 py-0.5 rounded-full">Verified</span>
+            </h3>
+
+            <div className="space-y-3">
+              <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#181e30] border border-slate-100 dark:border-white/5 flex items-center justify-between">
+                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Software Internships</span>
+                <span className="text-sm font-mono font-bold text-amber-500">3 Completed</span>
+              </div>
+              <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#181e30] border border-slate-100 dark:border-white/5 flex items-center justify-between">
+                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">LeetCode DSA Solved</span>
+                <span className="text-sm font-mono font-bold text-[#f59e0b]">100+ Problems</span>
+              </div>
+              <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#181e30] border border-slate-100 dark:border-white/5 flex items-center justify-between">
+                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Diploma CGPA (Polytechnic)</span>
+                <span className="text-sm font-mono font-bold text-emerald-600 dark:text-emerald-400">7.98 / 10.0</span>
+              </div>
+              <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#181e30] border border-slate-100 dark:border-white/5 flex items-center justify-between">
+                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Full-Stack Projects Built</span>
+                <span className="text-sm font-mono font-bold text-[#0e1726] dark:text-white">4+ Applications</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* 6 Core Highlight Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {highlights.map((item) => (
+            <div
+              key={item.title}
+              className="p-6 rounded-3xl bg-white dark:bg-[#121624] border border-slate-200/80 dark:border-white/10 hover:border-[#fbb034] dark:hover:border-amber-500/50 transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-1 flex flex-col justify-between"
+            >
+              <div>
+                <div className="w-11 h-11 rounded-2xl bg-[#faf8f5] dark:bg-[#181e30] border border-slate-100 dark:border-white/5 flex items-center justify-center mb-4 shadow-inner">
+                  {item.icon}
+                </div>
+                <h4 className="text-base font-bold text-[#0e1726] dark:text-white mb-2">
+                  {item.title}
+                </h4>
+                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
-
-      {/* Education (Left Side Animation) */}
-      {educationData.map((edu, index) => (
-        <motion.div
-          key={index}
-          className="mb-8 lg:mx-40 border-l-4 border-yellow-500 pl-4"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.2 }}
-        >
-          <h3 className="text-xl font-bold text-black flex items-center mb-2">
-            {edu.icon} {edu.institution}
-          </h3>
-          <p className="text-sm text-gray-500">{edu.date}</p>
-          <p className="text-gray-700">{edu.description}</p>
-        </motion.div>
-      ))}
-
-      {/* Certificates Heading */}
-      <motion.h2
-        className="text-2xl font-semibold text-center text-green-700 mt-8 mb-4"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        Certifications
-      </motion.h2>
-
-      {/* Certificates (Right Side Animation) */}
-      {certificatesData.map((cert, index) => (
-        <motion.div
-          key={index}
-          className="mb-8 lg:mx-40 border-l-4 border-yellow-500 pl-4"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.2 }}
-        >
-          <h3 className="text-xl font-bold text-black flex items-center mb-2">
-            {cert.icon} {cert.title}
-          </h3>
-          <p className="text-sm text-gray-500">{cert.date}</p>
-          <p className="text-gray-700">{cert.description}</p>
-        </motion.div>
-      ))}
     </section>
   );
 };
 
-export default EducationAndCertificates;
+export default AboutUs;
