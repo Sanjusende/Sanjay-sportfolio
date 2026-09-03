@@ -181,7 +181,7 @@ const Portfolio = () => {
               >
                 {/* Project Image Preview Box */}
                 <div>
-                  <div className="relative aspect-[16/10] bg-slate-100 dark:bg-[#0d0f17] overflow-hidden m-3 rounded-2xl border border-slate-100 dark:border-white/5">
+                  <div className="relative aspect-[16/10] bg-slate-100 dark:bg-[#0d0f17] skeleton-shimmer overflow-hidden m-3 rounded-2xl border border-slate-100 dark:border-white/5">
                     <img
                       src={project.image}
                       alt={project.title}
