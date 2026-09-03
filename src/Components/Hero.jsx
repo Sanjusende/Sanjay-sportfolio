@@ -7,10 +7,12 @@ import resumePDF from '../assets/resume.pdf';
 import { useTheme } from '../context/ThemeContext';
 
 const roles = [
-  "Full-Stack Developer",
-  "MERN Stack Engineer",
-  "React.js Specialist",
-  "Backend & API Architect"
+  "Java & DSA Enthusiast",
+  "Full-Stack MERN Developer",
+  "Software Engineering Enthusiast",
+  "AI & Full-Stack Developer",
+  "Problem Solver & Developer"
+
 ];
 
 const Hero = () => {

@@ -86,16 +86,13 @@ const Navbar = () => {
             {/* Logo + Brand Name */}
             <a
               href="#home"
-              className="flex items-center gap-3 group focus:outline-none"
+              className="flex items-center gap-2.5 group focus:outline-none"
               aria-label="Sanjay Sende Portfolio Home"
             >
-              <div className="relative">
-               
-                <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-[#07090e] animate-pulse" title="Available for work"></span>
-              </div>
               <div className="flex flex-col">
-                <span className="text-lg sm:text-xl font-bold tracking-tight text-slate-900 dark:text-white leading-tight">
+                <span className="text-lg sm:text-xl font-bold tracking-tight text-slate-900 dark:text-white leading-tight flex items-center gap-2">
                   Sanjay <span className="text-orange-500 font-medium">Sende</span>
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse inline-block" title="Available for work"></span>
                 </span>
                 <span className="text-[10px] font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 -mt-0.5 hidden sm:block">
                   Full-Stack MERN Dev
