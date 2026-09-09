@@ -7,6 +7,7 @@ import rsPhotography from '../assets/rsphotography.png';
 import realState from '../assets/real_state.png';
 import movieBooking from '../assets/movie.png';
 import sanjuDev from '../assets/sanju.jpg';
+import jobHunter from '../assets/JobHunter.png';
 
 const projects = [
   {
