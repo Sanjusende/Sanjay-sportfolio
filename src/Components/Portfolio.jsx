@@ -29,6 +29,43 @@ const projects = [
     typeBadge: "Full-Stack + AI System"
   },
   {
+    id: 6,
+    title: "Real Job Hunter 2K26",
+    subtitle: "AI-Powered Job Matching & Application Automation",
+    description: "A production-oriented AI job automation platform that analyzes uploaded resumes, discovers relevant job opportunities from supported job platforms, matches candidates with relevant roles using AI, and provides personalized job recommendations with direct application links.",
+    image: jobHunter,
+    categories: ['fullstack', 'ai'],
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "Gemini AI",
+      "n8n",
+      "Docker",
+      "Docker Compose",
+      "REST APIs",
+      "JWT",
+      "Tailwind CSS"
+    ],
+    features: [
+      "AI-powered resume parsing and candidate profile extraction",
+      "Resume-to-job matching based on skills and experience",
+      "Automated job discovery from supported job platforms",
+      "Personalized job recommendations with direct application links",
+      "Email notifications for relevant job opportunities",
+      "Application tracking and job status management",
+      "Dockerized backend and database development environment",
+      "JWT-based authentication and protected APIs",
+      "Responsive job-hunting dashboard"
+    ],
+    live: "https://job-hunter-2k26.vercel.app/",
+    github: "https://github.com/Sanjusende/Job_Hunter_2k26",
+    featured: true,
+    typeBadge: "AI Job Automation"
+  },
+  {
     id: 2,
     title: "Real Estate Management System",
     subtitle: "Property Discovery & Inquiry Portal",
@@ -122,12 +159,12 @@ const Portfolio = () => {
 
   return (
     <section id="projects" className="py-24 bg-[#fcfaf6] dark:bg-[#090b11] text-slate-800 dark:text-slate-100 relative overflow-hidden transition-colors duration-300">
-      
+
       {/* Ambient background blur */}
       <div className="absolute top-1/3 left-0 w-80 h-80 bg-[#fef3c7] dark:bg-amber-500/5 rounded-full blur-3xl opacity-50 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
@@ -154,11 +191,10 @@ const Portfolio = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveFilter(tab.id)}
-                className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
-                  activeFilter === tab.id
+                className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${activeFilter === tab.id
                     ? 'bg-[#fbb034] text-[#0e1726] shadow-md shadow-amber-500/20'
                     : 'bg-white dark:bg-[#121624] text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-[#181e30] border border-slate-200 dark:border-white/10'
-                }`}
+                  }`}
               >
                 {tab.label}
               </button>
