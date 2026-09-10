@@ -7,7 +7,7 @@ import rsPhotography from '../assets/rsphotography.png';
 import realState from '../assets/real_state.png';
 import movieBooking from '../assets/movie.png';
 import sanjuDev from '../assets/sanju.jpg';
-import jobHunter from '../assets/JobHunter.png';
+import JobHunter from '../assets/JobHunter.png';
 
 const projects = [
   {
@@ -34,7 +34,7 @@ const projects = [
     title: "Real Job Hunter 2K26",
     subtitle: "AI-Powered Job Matching & Application Automation",
     description: "A production-oriented AI job automation platform that analyzes uploaded resumes, discovers relevant job opportunities from supported job platforms, matches candidates with relevant roles using AI, and provides personalized job recommendations with direct application links.",
-    image: jobHunter,
+    image: JobHunter,
     categories: ['fullstack', 'ai'],
     technologies: [
       "React.js",
