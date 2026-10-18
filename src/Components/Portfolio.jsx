@@ -8,6 +8,7 @@ import realState from '../assets/real_state.png';
 import movieBooking from '../assets/movie.png';
 import sanjuDev from '../assets/sanju.jpg';
 import JobHunter from '../assets/JobHunter.png';
+import fitkit from '../assets/fitkit.png';
 
 const projects = [
   {
@@ -29,6 +30,32 @@ const projects = [
     featured: true,
     typeBadge: "Full-Stack + AI System"
   },
+  {
+  id: 2,
+  title: "FitKit Gym Website",
+  subtitle: "Modern Fitness & Gym Management Platform",
+  description:
+    "A modern, responsive gym website designed to help fitness enthusiasts explore membership plans, discover training programs, meet professional trainers, and get started with their fitness journey through an engaging user interface.",
+  image: fitkit,
+  categories: ["frontend", "ui-ux"],
+  technologies: [
+    "React.js",
+    "JavaScript (ES6+)",
+    "Tailwind CSS",
+    "React Router",
+    "Lucide React"
+  ],
+  features: [
+    "Modern and responsive gym landing page",
+    "Interactive membership plans and pricing cards",
+    "Workout programs for strength, cardio, and fitness",
+    "Professional trainer profiles and introductions",
+    "BMI calculator for basic fitness estimates",
+    "Contact and membership enquiry forms",
+    "Smooth navigation and mobile-friendly design",
+    "Modern animations and interactive UI components"
+  ]
+},
   {
     id: 6,
     title: "Real Job Hunter 2K26",
