@@ -9,6 +9,7 @@ import movieBooking from '../assets/movie.png';
 import sanjuDev from '../assets/sanju.jpg';
 import JobHunter from '../assets/JobHunter.png';
 import fitkit from '../assets/fitkit.png';
+import gymflow from '../assets/gymflow.png';
 
 const projects = [
   {
@@ -57,7 +58,7 @@ const projects = [
   ]
 },
   {
-    id: 6,
+    id: 3,
     title: "Real Job Hunter 2K26",
     subtitle: "AI-Powered Job Matching & Application Automation",
     description: "A production-oriented AI job automation platform that analyzes uploaded resumes, discovers relevant job opportunities from supported job platforms, matches candidates with relevant roles using AI, and provides personalized job recommendations with direct application links.",
@@ -94,7 +95,7 @@ const projects = [
     typeBadge: "AI Job Automation"
   },
   {
-    id: 2,
+    id: 4,
     title: "Real Estate Management System",
     subtitle: "Property Discovery & Inquiry Portal",
     description: "A full-stack real estate platform for browsing, searching, buying, and renting properties with user authentication, property listings, dynamic filters, and agent contact features.",
@@ -113,7 +114,7 @@ const projects = [
     typeBadge: "Full-Stack Portal"
   },
   {
-    id: 3,
+    id: 5,
     title: "Movie Seat Booking",
     subtitle: "Cinema Ticket & Seat Reservation Platform",
     description: "The movie seat booking feature enables users to view real-time cinema seat availability, select preferred rows and seats, dynamically calculate total ticket price, and simulate instant booking confirmation.",
@@ -130,9 +131,29 @@ const projects = [
     github: "https://github.com/Sanjusende/HashedBit-Internship",
     featured: true,
     typeBadge: "Interactive Web App"
+  },{
+    id: 6,
+    title: "GymFlow SaaS",
+    subtitle: "Multi-Tenant B2B Gym ERP & AI Fitness Platform",
+    description: "A comprehensive cloud-based SaaS platform engineered to digitize local fitness centers. Features secure 2-step email OTP onboarding, custom UPI QR scanner uploads, real-time membership tracking, automated WhatsApp fee reminders, and a cached Gemini AI Indian diet generator.",
+    image: gymflow, // Apni import ki hui image ka variable yahan likhein
+    categories: ['frontend', 'backend', 'fullstack', 'saas'],
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB Atlas", "Flutter", "Tailwind CSS", "Google Gemini AI", "Nodemailer"],
+    features: [
+      "Multi-tenant data isolation with secure JWT authentication and role-based access",
+      "Automated 6-digit HTML email OTP verification via Nodemailer and custom UPI QR generation",
+      "Real-time owner dashboard monitoring active members, expirations, and pending Udhaari dues",
+      "Zero-cost 1-click Hinglish WhatsApp fee reminders with embedded dynamic UPI payment links",
+      "Automated midnight cron job (IST) for seamless daily membership status updates",
+      "Passwordless member portal with cached 7-day Gemini AI Indian diet plan generation"
+    ],
+    live: "https://gymflow-ochre-ten.vercel.app/", // Apna live Vercel link yahan daalein
+    github: "https://github.com/Sanjusende/gymflow-saas",
+    featured: true,
+    typeBadge: "B2B SaaS Platform"
   },
   {
-    id: 4,
+    id: 7,
     title: "RS Photography Studio Platform",
     subtitle: "Creative Showcase & Booking Management",
     description: "A full-stack photography portfolio and management application built to showcase photography work, category filtering, package booking inquiry workflows, and manage portfolio content.",
@@ -151,7 +172,7 @@ const projects = [
     typeBadge: "Production Web App"
   },
   {
-    id: 5,
+    id: 8,
     title: "Developer Portfolio System",
     subtitle: "High-Performance Portfolio & Showcase",
     description: "A developer portfolio built with React.js, Tailwind CSS, and Framer Motion. Engineered for recruiter clarity with structured experience timelines, interactive skill matrices, and verified metrics.",
