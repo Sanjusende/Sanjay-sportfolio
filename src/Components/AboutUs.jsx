@@ -69,10 +69,10 @@ const AboutUs = () => {
           {/* Main Story (7 Cols) */}
           <div className="lg:col-span-7 flex flex-col space-y-4 text-slate-700 dark:text-slate-300 text-base leading-relaxed bg-white dark:bg-[#121624] p-8 rounded-3xl border border-slate-200/80 dark:border-white/10 shadow-md">
             <p className="text-lg font-bold text-[#0e1726] dark:text-white border-l-4 border-[#fbb034] pl-4 py-1">
-              I'm a Computer Science & Engineering student and Full-Stack MERN Developer focused on building real-world web applications. I work across frontend development, backend APIs, databases, authentication and AI integrations.
+              I'm a Full-Stack MERN Developer and Co-Founder at <span className="text-[#f59e0b]">TAVQEN Technologies</span>, focused on building real-world digital products, scalable cloud architectures, and AI-powered software solutions.
             </p>
             <p className="text-slate-600 dark:text-slate-300">
-              My development journey includes 3 Software Development Internships (ClaudWent Solution, HashedBit Innovations & Connect Shiksha) with hands-on experience in React.js, Node.js, Express.js, MongoDB, REST APIs, and JWT authentication.
+              Alongside building TAVQEN Technologies, my journey includes a 6-month Software Development Internship at ClaudWent Solution Pvt. Ltd. with hands-on experience in React.js, Node.js, Express.js, MongoDB, REST APIs, and JWT authentication.
             </p>
             <p className="text-slate-600 dark:text-slate-300">
               I emphasize writing clean, modular code, building intuitive responsive interfaces, and architecting reliable backend services with MongoDB, Express, and Node.js.
@@ -98,9 +98,13 @@ const AboutUs = () => {
             </h3>
 
             <div className="space-y-3">
+              <div className="p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-between">
+                <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">Our Tech Venture</span>
+                <span className="text-sm font-mono font-bold text-amber-500">TAVQEN Technologies</span>
+              </div>
               <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#181e30] border border-slate-100 dark:border-white/5 flex items-center justify-between">
-                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Software Internships</span>
-                <span className="text-sm font-mono font-bold text-amber-500">3 Completed</span>
+                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Software Internship</span>
+                <span className="text-sm font-mono font-bold text-amber-500">ClaudWent Solution</span>
               </div>
               <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#181e30] border border-slate-100 dark:border-white/5 flex items-center justify-between">
                 <span className="text-sm font-medium text-slate-700 dark:text-slate-300">LeetCode DSA Solved</span>
@@ -112,7 +116,7 @@ const AboutUs = () => {
               </div>
               <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-[#181e30] border border-slate-100 dark:border-white/5 flex items-center justify-between">
                 <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Full-Stack Projects Built</span>
-                <span className="text-sm font-mono font-bold text-[#0e1726] dark:text-white">4+ Applications</span>
+                <span className="text-sm font-mono font-bold text-[#0e1726] dark:text-white">5+ Applications</span>
               </div>
             </div>
           </div>

@@ -7,12 +7,11 @@ import resumePDF from '../assets/resume.pdf';
 import { useTheme } from '../context/ThemeContext';
 
 const roles = [
-  "Java & DSA Enthusiast",
+  "Co-Founder & Dev @ TAVQEN",
   "Full-Stack MERN Developer",
+  "AI & Cloud Solutions Developer",
   "Software Engineering Enthusiast",
-  "AI & Full-Stack Developer",
-  "Problem Solver & Developer"
-
+  "Java & DSA Problem Solver"
 ];
 
 const Hero = () => {
