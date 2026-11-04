@@ -14,10 +14,10 @@ const achievements = [
   },
   {
     icon: <FaBriefcase className="text-amber-500 text-2xl" />,
-    stats: "3 Software Internships",
-    title: "Verified Industry Experience",
+    stats: "Industry Experience",
+    title: "Venture & Software Internship",
     category: "Full-Stack Web Engineering",
-    description: "Hands-on engineering across 3 internships at ClaudWent Solution Pvt. Ltd. (6 mos), HashedBit Innovations, and Connect Shiksha building full-stack MERN features, REST APIs, and responsive UIs.",
+    description: "Hands-on engineering as Co-Founder at TAVQEN Technologies and Software Development Intern at ClaudWent Solution Pvt. Ltd. (6 mos), building scalable MERN systems, REST APIs, and production platforms.",
     link: "#experience",
     linkText: "View Timeline"
   },
@@ -39,18 +39,7 @@ const certifications = [
     period: "6 Months",
     type: "Industry Internship"
   },
-  {
-    name: "React Developer Internship",
-    issuer: "HashedBit Innovations",
-    period: "Sep 2024 – Nov 2024",
-    type: "Industry Internship"
-  },
-  {
-    name: "MERN Stack Web Development Internship",
-    issuer: "Connect Shiksha",
-    period: "Oct 2023 – Nov 2023",
-    type: "Industry Internship"
-  },
+
   {
     name: "Java & Object-Oriented Programming Fundamentals",
     issuer: "Academic & Self-Paced Training",
@@ -63,7 +52,7 @@ const Achievements = () => {
   return (
     <section id="achievements" className="py-20 bg-[#faf8f5] dark:bg-[#0d0f17] text-slate-800 dark:text-slate-100 relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
           <span className="text-xs font-bold font-mono uppercase tracking-wider text-[#f59e0b] mb-2">

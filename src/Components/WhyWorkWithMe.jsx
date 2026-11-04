@@ -26,9 +26,9 @@ const values = [
   {
     icon: <FaHandsHelping className="text-emerald-500 text-2xl" />,
     title: "Reliable & Growth-Driven",
-    badge: "3 Internships",
+    badge: "Venture & Internship",
     tagline: "Fast Learner & Team Player",
-    description: "Hands-on industry track record across ClaudWent Solution, HashedBit Innovations & Connect Shiksha shipping milestones on time with clean code."
+    description: "Hands-on engineering track record co-founding TAVQEN Technologies and software internship at ClaudWent Solution shipping milestones on time with clean code."
   }
 ];
 

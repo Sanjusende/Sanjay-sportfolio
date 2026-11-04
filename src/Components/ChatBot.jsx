@@ -39,30 +39,17 @@ const SANJAY_DATA = {
         "Implemented JWT authentication and role-based access authorization.",
         "Collaborated in Agile/Scrum team workflows, code reviews, and quality assurance."
       ]
-    },
-    {
-      role: "React Developer Intern",
-      company: "HashedBit Innovations",
-      duration: "Sep 2024 – Nov 2024",
-      points: [
-        "Built responsive, component-driven user interfaces with React.js & Tailwind CSS.",
-        "Created modular, reusable UI components and handled state management.",
-        "Performed bug fixes, cross-browser UI testing, and performance tuning."
-      ]
-    },
-    {
-      role: "MERN Stack Intern",
-      company: "Connect Shiksha",
-      duration: "Oct 2023 – Nov 2023",
-      points: [
-        "Implemented end-to-end full-stack CRUD functionality using React, Node & MongoDB.",
-        "Integrated client-side state with backend APIs and maintained code on GitHub.",
-        "Delivered mobile-friendly, responsive layouts across screens."
-      ]
     }
   ],
 
   projects: [
+    {
+      name: "TAVQEN Technologies (Our Own Business)",
+      desc: "Our co-founded software engineering & AI venture delivering AI solutions, scalable cloud systems, web platforms, and developer automation.",
+      tech: "React.js, Node.js, Express.js, MongoDB, AI / LLM, Cloud Architecture",
+      live: "https://vyntrasoutions.in/",
+      github: "https://github.com/vyntra-tech"
+    },
     {
       name: "KrishiMitra AI Platform",
       desc: "Smart agricultural portal featuring Gemini Vision AI for crop disease detection, mandi crop pricing, and farmer advisory.",
@@ -82,7 +69,7 @@ const SANJAY_DATA = {
       desc: "Interactive cinema seat selector with live pricing updates, seat reservation states, and responsive interface.",
       tech: "React.js, Tailwind CSS, LocalStorage",
       live: "https://movieseatbook.vercel.app/",
-      github: "https://github.com/Sanjusende/HashedBit-Internship"
+      github: "https://github.com/Sanjusende"
     },
     {
       name: "RS Photography Studio",
@@ -128,10 +115,11 @@ const INITIAL_MESSAGES = [
   {
     id: 1,
     sender: 'bot',
-    text: "Namaste! 🙏 Main **Sanjay Sende** ka official AI Portfolio Assistant hoon.\n\nAap Sanjay ke **skills, 3 internships, live projects, resume ya contact details** ke bare me kuch bhi pooch sakte hain!",
+    text: "Namaste! 🙏 Main **Sanjay Sende** ka official AI Portfolio Assistant hoon.\n\nAap Sanjay ke **skills, co-founded business (TAVQEN Technologies), software internship, live projects, resume ya contact details** ke bare me pooch sakte hain!",
     chips: [
+      "TAVQEN Technologies (Our Business)",
       "Tell me about Sanjay",
-      "3 Internships",
+      "Work Experience",
       "Projects & Live Links",
       "Tech Skills",
       "Download Resume",
@@ -142,6 +130,24 @@ const INITIAL_MESSAGES = [
 
 function getBotResponse(userQuery) {
   const query = userQuery.toLowerCase().trim();
+
+  // 0. TAVQEN TECHNOLOGIES / OWN BUSINESS / VENTURE
+  if (query.includes('tavqen') || query.includes('vyntra') || query.includes('business') || query.includes('venture') || query.includes('agency') || query.includes('startup') || query.includes('own business')) {
+    return {
+      text: `🚀 **TAVQEN Technologies** Sanjay Sende ka co-founded tech venture hai!\n\n` +
+            `• 🏢 **About**: TAVQEN Technologies ek modern software engineering, AI solutions & cloud architecture agency hai.\n` +
+            `• 👨‍💻 **Sanjay's Role**: Full-Stack Developer & Co-Founding Team Member.\n` +
+            `• 🛠️ **Core Offerings**: Custom SaaS development, enterprise AI/LLM integrations, auto-scaling cloud infrastructure, and developer automation tools.\n` +
+            `• 🌐 **Official Website**: [https://vyntrasoutions.in/](https://vyntrasoutions.in/)\n` +
+            `• 📦 **GitHub Organization**: [github.com/vyntra-tech](https://github.com/vyntra-tech)\n\n` +
+            `Agar aapko koi digital product, web application ya AI software build karwana hai toh TAVQEN Technologies ke through connect kar sakte hain!`,
+      links: [
+        { label: "🌐 Visit TAVQEN Website", url: "https://vyntrasoutions.in/" },
+        { label: "💻 GitHub Organization", url: "https://github.com/vyntra-tech" },
+        { label: "Connect on WhatsApp", url: SANJAY_DATA.whatsapp }
+      ]
+    };
+  }
 
   // 1. GREETINGS
   if (/^(hi|hello|hey|namaste|pranam|hola|kaisa|kaise ho|hlo)/i.test(query)) {
@@ -159,7 +165,7 @@ function getBotResponse(userQuery) {
     return {
       text: `**Sanjay Sende** ek passionate **Full-Stack MERN Developer** hain from Bhopal, MP, India.\n\n` +
             `• 🎓 **Education**: B.Tech in CSE at TIT Bhopal (2024-2027) & Diploma from Govt. Polytechnic Balaghat (7.98 CGPA).\n` +
-            `• 💼 **Experience**: **3 Software Development Internships** (ClaudWent Solution, HashedBit Innovations, Connect Shiksha).\n` +
+            `• 💼 **Experience**: **Co-Founder at TAVQEN Technologies** & Software Development Intern at ClaudWent Solution Pvt. Ltd. (6 Months).\n` +
             `• ⚡ **Tech Stack**: React.js, Node.js, Express.js, MongoDB, Tailwind CSS, REST APIs, JWT Auth.\n` +
             `• 🧩 **Problem Solving**: 100+ problems solved on LeetCode with Java.\n\n` +
             `Sanjay currently full-time MERN stack developer opportunities & internships ke liye open hain!`,
@@ -172,15 +178,15 @@ function getBotResponse(userQuery) {
   }
 
   // 3. INTERNSHIPS / EXPERIENCE
-  if (query.includes('intern') || query.includes('experience') || query.includes('job') || query.includes('company') || query.includes('claudwent') || query.includes('hashedbit') || query.includes('connect shiksha') || query.includes('kaam kiya')) {
-    let expText = `Sanjay ke paas **3 Real Software Development Internships** ka hands-on industry experience hai:\n\n`;
-    SANJAY_DATA.internships.forEach((item, idx) => {
-      expText += `**${idx + 1}. ${item.role} — ${item.company}** (${item.duration})\n`;
-      item.points.forEach(pt => {
-        expText += `   • ${pt}\n`;
-      });
-      expText += `\n`;
-    });
+  if (query.includes('intern') || query.includes('experience') || query.includes('job') || query.includes('company') || query.includes('claudwent') || query.includes('kaam kiya')) {
+    let expText = `Sanjay ke paas **TAVQEN Technologies** aur **ClaudWent Solution Pvt. Ltd.** ka hands-on engineering experience hai:\n\n`;
+    expText += `**1. Co-Founder & Full-Stack Developer — TAVQEN Technologies** (Current Venture)\n`;
+    expText += `   • Co-founding engineer building AI-powered digital products, cloud architectures, and developer automation tools.\n`;
+    expText += `   • Architecting end-to-end full stack web platforms, real-time database models, and modern SaaS products.\n\n`;
+    expText += `**2. Software Development Intern — ClaudWent Solution Pvt. Ltd.** (6 Months)\n`;
+    expText += `   • Developed scalable REST APIs using React.js, Node.js, Express & MongoDB.\n`;
+    expText += `   • Implemented JWT authentication and role-based access authorization.\n`;
+    expText += `   • Collaborated in Agile/Scrum team workflows, code reviews, and quality assurance.\n\n`;
     expText += `**Summary**: Proven experience across React.js, Node.js, Express, MongoDB, REST APIs, JWT Auth, Agile/Scrum & code reviews.`;
 
     return {
@@ -233,7 +239,7 @@ function getBotResponse(userQuery) {
     return {
       text: `Aap Sanjay Sende ka verified resume neeche diye link se direct view aur download kar sakte hain:\n\n` +
             `📄 **Sanjay Sende Resume (PDF)**\n` +
-            `Includes: 3 Internships, Top Projects, Education & Technical Skills.`,
+            `Includes: TAVQEN Technologies, Software Internship at ClaudWent Solution, Top Projects, Education & Technical Skills.`,
       links: [
         { label: "📄 Download / View Resume", url: SANJAY_DATA.resume }
       ]
@@ -291,8 +297,9 @@ function getBotResponse(userQuery) {
   // DEFAULT / FALLBACK
   return {
     text: `Main Sanjay Sende ke bare me sab jaanta hoon! Aap inme se kisi bhi topic ke bare me pooch sakte hain:\n\n` +
-          `• 💼 **3 Internships** (ClaudWent, HashedBit, Connect Shiksha)\n` +
-          `• 🚀 **Projects** (KrishiMitra AI, Real Estate System, Movie Booking)\n` +
+          `• 🚀 **TAVQEN Technologies** (Co-Founded Own Business)\n` +
+          `• 💼 **Software Internship** (ClaudWent Solution Pvt. Ltd.)\n` +
+          `• 🌐 **Projects** (KrishiMitra AI, Real Estate System, Movie Booking)\n` +
           `• ⚡ **Tech Stack** (React, Node.js, Express, MongoDB, Tailwind)\n` +
           `• 🧩 **LeetCode & DSA** (100+ solved)\n` +
           `• 🎓 **Education** (B.Tech CSE TIT Bhopal)\n` +
@@ -514,10 +521,10 @@ const ChatBot = () => {
             <span className="text-[10px] font-mono">Suggested:</span>
             <div className="flex items-center gap-1 overflow-x-auto no-scrollbar">
               <button
-                onClick={() => handleSend("Tell me about 3 internships")}
+                onClick={() => handleSend("Tell me about work experience")}
                 className="px-2 py-0.5 rounded-md hover:bg-orange-500/10 hover:text-orange-500 text-[10px] whitespace-nowrap cursor-pointer"
               >
-                💼 Internships
+                💼 Experience
               </button>
               <button
                 onClick={() => handleSend("Show projects with live links")}
